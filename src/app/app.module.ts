@@ -4,6 +4,8 @@ import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { QuestionsService } from './questions.service';
 import { FormsModule } from '@angular/forms';
+
+import { FakeLanguageParseServiceService } from './fake-language-parse-service.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +15,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [QuestionsService],
+  providers: [QuestionsService, FakeLanguageParseServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
