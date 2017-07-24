@@ -3,17 +3,16 @@ import { NgModule } from '@angular/core';
 import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-import { QuestionsModule } from './questions/questions.module';
+import { QuestionsService } from './questions.service';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     AlertModule.forRoot(),
-    QuestionsModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [QuestionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

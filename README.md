@@ -1,6 +1,9 @@
 ## Gotchas
 - npm install didn't seem to work with angular-cli. Yarn Install did. 
 
+## Tasks
+- 
+
 # NaturalLanguage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.
