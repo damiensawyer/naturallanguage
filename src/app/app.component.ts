@@ -8,3 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 }
+
+
+export class Functions {
+  GetQueries(): string[] {
+    return [
+      'navigate to home',
+      'are there any bookings for smith'
+    ];
+  }
+}
