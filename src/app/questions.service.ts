@@ -12,7 +12,7 @@ export class QuestionsService {
       Question.Create(3, 'Navigate to Back'),
       Question.Create(4, 'Navigate to Front'),
       Question.Create(5, 'Navigate to Door'),
-      Question.Create(5, 'Navigate to Chicken')
+      Question.Create(6, 'Navigate to Chicken')
     ];
   }
 
