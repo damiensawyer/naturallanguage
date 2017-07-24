@@ -1,15 +1,31 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="container">
   <h1>
     {{title}}!
   </h1>
+        <p>There are {{count}} questions</p>
 
-  <p>There are {{count}} questions</p>
+  <div class="row">
+    <div class="col-sm-6">
 
-  <ul>
-    <alert *ngFor="let question of questions" type="success">{{question.id}} - {{question.question}}</alert>
-  </ul>
+      <div class="form-group">
+
+        <label>Choose your question from list or type:</label>
+        <select class="form-control" [(ngModel)]="selectedQuestion" (ngModelChange)="setQuestion()">
+          <option *ngFor="let question of questions" [ngValue]="question">{{question.question}}</option>
+        </select>
+
+
+        <textarea class="form-control" [(ngModel)]="questionText"></textarea>
+      </div>
+
+
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <h2>Response from service</h2>
+        <alert *ngIf="!!questionText" type="info">{{questionText}}</alert>
+      </div>
+
+    </div>
+  </div>
 </div>
-
-
-<alert type="success">hello</alert>

@@ -2,7 +2,15 @@
 - npm install didn't seem to work with angular-cli. Yarn Install did. 
 
 ## Tasks
-- 
+- ILanguageParseService  -- eg Azure, AWS
+- QuestionService -- Provides Default Questions
+
+## UI
+- Display a dropdown of questions or allow typing
+- Select a Providor from toggle switches
+- Send query to providor async
+
+
 
 # NaturalLanguage
 
