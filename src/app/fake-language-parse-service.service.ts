@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ILanguageParseService, LanguageParseResults } from './ilanguage-parse-service';
 @Injectable()
 export class FakeLanguageParseServiceService implements ILanguageParseService {
-  Name: string;
+  Name = 'Fake language service';
   parseText(naturalLanguage: string): Promise<LanguageParseResults> {
     const response =  !naturalLanguage ? '' : `${naturalLanguage} ... results`;
     const result = <LanguageParseResults>{ resultJSON: response };

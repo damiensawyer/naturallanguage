@@ -9,7 +9,7 @@ export class LUISLanguageParseService implements ILanguageParseService {
 
   constructor(private http: Http) { }
 
-  Name: string;
+  Name = 'MS LUIS (NB - we only have 1000 free API calls then it will fail)';
   parseText(naturalLanguage: string): Promise<LanguageParseResults> {
 
     const url = `https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/cdd7ebfd-e0ea-4b1f-8e8b-1dde80aac11e`

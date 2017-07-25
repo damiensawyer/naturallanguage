@@ -19,7 +19,7 @@ export class AppComponent {
   ) {
     this.textChanged();
   }
-
+  activeLanguageService = this.luisLanguageParseService;
   title = 'Natural Language Tester';
   selectedQuestion: Question;
   count = this.questionService.GetQueries().length;
@@ -37,9 +37,7 @@ export class AppComponent {
   }
 
   executeQuery(questionText: string): void {
-    const activeService = this.luisLanguageParseService;
-
-    activeService.parseText(this.questionText).then(x => {
+    this.activeLanguageService.parseText(this.questionText).then(x => {
       this.resultText = x.resultJSON;
     });
   }
