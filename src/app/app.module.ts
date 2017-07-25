@@ -6,6 +6,7 @@ import { QuestionsService } from './questions.service';
 import { FormsModule } from '@angular/forms';
 
 import { FakeLanguageParseServiceService } from './fake-language-parse-service.service';
+import { LUISLanguageParseService } from './luislanguage-parse.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +16,7 @@ import { FakeLanguageParseServiceService } from './fake-language-parse-service.s
     BrowserModule,
     FormsModule
   ],
-  providers: [QuestionsService, FakeLanguageParseServiceService],
+  providers: [QuestionsService, FakeLanguageParseServiceService, LUISLanguageParseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

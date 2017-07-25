@@ -26,10 +26,10 @@
         </select>
 
 
-        <textarea class="form-control" [(ngModel)]="questionText" (ngModelChange)="processNaturalLanguage()"></textarea>
+        <textarea class="form-control" [(ngModel)]="questionText" (ngModelChange)="textChanged()"></textarea>
       </div>
 
-
+    <button type="button" class="btn btn-primary" (click)="executeQuery(questionText)">Execute Query</button>
     </div>
     <div class="col-sm-6">
       <div class="form-group">

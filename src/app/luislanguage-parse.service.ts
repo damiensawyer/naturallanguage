@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { ILanguageParseService, LanguageParseResults } from './ilanguage-parse-service';
+
+
 @Injectable()
-export class FakeLanguageParseServiceService implements ILanguageParseService {
+export class LUISLanguageParseService implements ILanguageParseService {
   Name: string;
   parseText(naturalLanguage: string): Promise<LanguageParseResults> {
-    const response =  !naturalLanguage ? '' : `${naturalLanguage} ... results`;
-    const result = <LanguageParseResults>{ resultJSON: response };
+
+    const result = <LanguageParseResults>{ resultJSON: `LUIS NOT IMPLEMENTED : ${naturalLanguage}` };
     return Promise.resolve(result);
   }
 
   constructor() { }
-}
 
+}

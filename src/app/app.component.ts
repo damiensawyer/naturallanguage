@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { QuestionsService } from './questions.service';
 import { FakeLanguageParseServiceService } from './fake-language-parse-service.service';
+import { LUISLanguageParseService } from './luislanguage-parse.service';
 import { Injectable } from '@angular/core';
 import { Question } from './question';
 @Component({
@@ -13,8 +14,11 @@ import { Question } from './question';
 export class AppComponent {
   constructor(
     private questionService: QuestionsService,
-    private fakeLanguageService: FakeLanguageParseServiceService // todo - register and resolve as an array of interfaces.
-  ) { }
+    private fakeLanguageService: FakeLanguageParseServiceService, // todo - register and resolve as an array of interfaces.
+    private luisLanguageParseService: LUISLanguageParseService
+  ) {
+    this.textChanged();
+  }
 
   title = 'Natural Language Tester';
   selectedQuestion: Question;
@@ -25,13 +29,18 @@ export class AppComponent {
 
   setQuestion(): void {
     this.questionText = this.selectedQuestion.question;
-    this.processNaturalLanguage();
+    this.textChanged();
   }
 
-  processNaturalLanguage() {
-    this.fakeLanguageService.parseText(this.questionText).then(x => {
+  textChanged(): void {
+    this.resultText = 'Execute query to see results';
+  }
+
+  executeQuery(questionText: string): void {
+    const activeService = this.luisLanguageParseService;
+
+    activeService.parseText(this.questionText).then(x => {
       this.resultText = x.resultJSON;
     });
   }
-
 }
