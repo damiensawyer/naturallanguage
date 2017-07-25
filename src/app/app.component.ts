@@ -37,8 +37,11 @@ export class AppComponent {
   }
 
   executeQuery(questionText: string): void {
-    this.activeLanguageService.parseText(this.questionText).then(x => {
-      this.resultText = x.resultJSON;
-    });
+    this.resultText = 'Executing query....';
+    this.activeLanguageService.parseText(this.questionText)
+      .then(x => {
+        this.resultText = x.resultJSON;
+      })
+      .catch(reason => { this.resultText = `ERROR - ${reason}`; });
   }
 }

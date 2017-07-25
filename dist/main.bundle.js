@@ -100,9 +100,12 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.executeQuery = function (questionText) {
         var _this = this;
-        this.activeLanguageService.parseText(this.questionText).then(function (x) {
+        this.resultText = 'Executing query....';
+        this.activeLanguageService.parseText(this.questionText)
+            .then(function (x) {
             _this.resultText = x.resultJSON;
-        });
+        })
+            .catch(function (reason) { _this.resultText = "ERROR - " + reason; });
     };
     return AppComponent;
 }());
