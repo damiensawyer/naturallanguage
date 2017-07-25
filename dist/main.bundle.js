@@ -296,7 +296,8 @@ var QuestionsService = (function () {
             __WEBPACK_IMPORTED_MODULE_1__Question__["a" /* Question */].Create(6, 'Do I have a booking for Anderson'),
             __WEBPACK_IMPORTED_MODULE_1__Question__["a" /* Question */].Create(7, 'Is there a home page'),
             __WEBPACK_IMPORTED_MODULE_1__Question__["a" /* Question */].Create(8, "Show me a report of today's bookings"),
-            __WEBPACK_IMPORTED_MODULE_1__Question__["a" /* Question */].Create(9, "Show me bookings for next week")
+            __WEBPACK_IMPORTED_MODULE_1__Question__["a" /* Question */].Create(9, "Show me bookings for next week"),
+            __WEBPACK_IMPORTED_MODULE_1__Question__["a" /* Question */].Create(10, "Show me a report of bookings from last year")
         ];
     };
     return QuestionsService;

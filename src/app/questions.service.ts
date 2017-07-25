@@ -14,7 +14,8 @@ export class QuestionsService {
       Question.Create(6, 'Do I have a booking for Anderson'),
       Question.Create(7, 'Is there a home page'),
       Question.Create(8, `Show me a report of today's bookings`),
-      Question.Create(9, `Show me bookings for next week`)
+      Question.Create(9, `Show me bookings for next week`),
+      Question.Create(10, `Show me a report of bookings from last year`)
     ];
   }
 
