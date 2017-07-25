@@ -4,6 +4,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { QuestionsService } from './questions.service';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { FakeLanguageParseServiceService } from './fake-language-parse-service.service';
 import { LUISLanguageParseService } from './luislanguage-parse.service';
@@ -13,6 +14,7 @@ import { LUISLanguageParseService } from './luislanguage-parse.service';
   ],
   imports: [
     AlertModule.forRoot(),
+    HttpModule,
     BrowserModule,
     FormsModule
   ],
