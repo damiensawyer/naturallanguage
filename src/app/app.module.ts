@@ -16,11 +16,13 @@ import { StaticComponent } from './static/static.component';
 
 import { UIRouterModule } from '@uirouter/angular';
 import { UiRoutingModule } from './ui-routing.module';
+import { NaturalLanguageTestComponent } from './natural-language-test/natural-language-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StaticComponent
+    StaticComponent,
+    NaturalLanguageTestComponent
   ],
   imports: [
     BrowserModule,

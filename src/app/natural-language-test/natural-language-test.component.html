@@ -1,0 +1,39 @@
+
+<div class="container">
+  <h1>
+   {{title}}
+  </h1>
+
+  <p>
+    Demo as detailed in <a href='https://trello.com/c/KLGWHDcQ'>this</a> Trello card (access required).
+  </p>
+  <p>Just as
+    <a href='https://azure.microsoft.com/en-au/services/cognitive-services/language-understanding-intelligent-service/'>this</a>    demo parses text to extract the meaning, then intention of this page is to allow us to test extraction of meaning from
+    free text.
+  </p>
+  <p>The service is currently pointing to <strong>{{activeLanguageService.Name}}</strong>.</p>
+  <div class="row">
+    <div class="col-sm-6">
+
+      <div class="form-group">
+
+        <label>Choose your question from list...</label>
+        <select class="form-control" [(ngModel)]="selectedQuestion" (ngModelChange)="setQuestion()">
+          <option *ngFor="let question of questions" [ngValue]="question">{{question.question}}</option>
+        </select>
+
+     <label>... or type your own.</label>
+        <textarea class="form-control" [(ngModel)]="questionText" (ngModelChange)="textChanged()"></textarea>
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="executeQuery(questionText)">Execute Query</button>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <h2>Response from service</h2>
+        <pre class='alert alert-info'>{{resultText}}</pre>
+      </div>
+
+    </div>
+  </div>
+</div>

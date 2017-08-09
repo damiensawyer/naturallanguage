@@ -11,14 +11,7 @@ export class StaticComponent implements OnInit {
     static RouteStates = <Ng2StateDeclaration[]>[{
         name: 'static',
         url: '/static',
-        component: StaticComponent,
-        resolve: [// get data that will load before the component is displayed.
-          {
-                token: 'static',
-                deps: [Transition],
-                resolveFn: () => {}
-            }
-        ]
+        component: StaticComponent
     }];
 
   constructor() { }
