@@ -26,8 +26,9 @@ import { NaturalLanguageTestComponent } from './natural-language-test/natural-la
   ],
   imports: [
     BrowserModule,
+    UIRouterModule,
     UiRoutingModule,
-    AlertModule, // .forRoot(),
+    AlertModule,
     HttpModule,
     FormsModule
   ],
