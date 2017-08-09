@@ -8,11 +8,11 @@ import { Transition, Ng2StateDeclaration } from '@uirouter/angular';
   styleUrls: ['./static.component.css']
 })
 export class StaticComponent implements OnInit {
-    static RouteStates = <Ng2StateDeclaration[]>[{
-        name: 'static',
-        url: '/static',
-        component: StaticComponent
-    }];
+  static RouteStates = <Ng2StateDeclaration[]>[{
+    name: 'static',
+    url: '/static',
+    component: StaticComponent
+  }];
 
   constructor() { }
 
