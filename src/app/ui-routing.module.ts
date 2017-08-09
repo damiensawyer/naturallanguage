@@ -1,7 +1,7 @@
-import { NaturalLanguageTestComponent } from './natural-language-test/natural-language-test.component';
+import { NaturalLanguageTestComponent } from './components/natural-language-test/natural-language-test.component';
 import { NgModule } from '@angular/core';
 import { UIRouterModule, Transition, Ng2StateDeclaration } from '@uirouter/angular';
-import { StaticComponent } from './static/static.component';
+import { StaticComponent } from './components/static/static.component';
 import { AppComponent } from './app.component';
 import * as config from './router.config';
 

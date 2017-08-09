@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionsService } from './../questions.service';
-import { FakeLanguageParseServiceService } from './../fake-language-parse-service.service';
-import { LUISLanguageParseService } from './../luislanguage-parse.service';
+import { QuestionsService } from './../../services/questions.service';
+import { FakeLanguageParseServiceService } from './../../services/fake-language-parse-service.service';
+import { LUISLanguageParseService } from './../../services/luislanguage-parse.service';
 import { Injectable } from '@angular/core';
-import { Question } from './../question';
+import { Question } from './../../services/question';
 import { Transition, Ng2StateDeclaration } from '@uirouter/angular';
 
 @Component({
