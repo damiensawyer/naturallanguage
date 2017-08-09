@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "hello\r\n<a uiSref=\"nlt\" uiSrefActive=\"active\">NLT</a>\r\n<a uiSref=\"static\" uiSrefActive=\"active\">Static</a>\r\n<br/>\r\n<ui-view></ui-view>"
+module.exports = "<p>\r\nMy thoughts are that we could have two routes, one to the demo page and one to the 'test' page. That way it could all be one project. \r\nI guess that we don't need to have this landing page with the links on it...      \r\n</p>\r\n<p>\r\n<a uiSref=\"nlt\" uiSrefActive=\"active\">NLT</a>\r\n<a uiSref=\"static\" uiSrefActive=\"active\">Static</a>\r\n</p>\r\n<br/>\r\n<ui-view></ui-view>"
 
 /***/ }),
 
