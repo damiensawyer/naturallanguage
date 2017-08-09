@@ -4,6 +4,9 @@ import { FakeLanguageParseServiceService } from './fake-language-parse-service.s
 import { LUISLanguageParseService } from './luislanguage-parse.service';
 import { Injectable } from '@angular/core';
 import { Question } from './question';
+import { Transition, Ng2StateDeclaration } from '@uirouter/angular';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +15,19 @@ import { Question } from './question';
 
 @Injectable()
 export class AppComponent {
+    static RouteStates = <Ng2StateDeclaration[]>[{
+        name: 'app',
+        url: '/app',
+        component: AppComponent,
+        resolve: [
+          {
+                token: 'home',
+                deps: [Transition],
+                resolveFn: () => {}
+            }
+        ]
+    }];
+
   constructor(
     private questionService: QuestionsService,
     private fakeLanguageService: FakeLanguageParseServiceService, // todo - register and resolve as an array of interfaces.

@@ -10,7 +10,8 @@
 - Select a Providor from toggle switches
 - Send query to providor async
 
-
+## Issues
+Hit this https://github.com/ui-router/angular/issues/65
 
 # NaturalLanguage
 
